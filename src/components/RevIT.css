@@ -1,0 +1,162 @@
+h1 {
+	margin: 0.7rem;
+}
+
+form {
+	margin-bottom: 0.7rem;
+}
+
+.dot {
+	border-radius: 50%;
+	display: inline-block;
+	background-color: red;
+	width: 10px;
+	height: 10px;
+	position: relative;
+	top: -5px;
+	left: -5px;
+	z-index: -100;
+}
+
+.mapSearchControls {
+	padding: 10px;
+}
+
+.mapImageZoom {
+	width: 100vw;
+	background-color: rgb(0, 0, 0, 0.94);
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.mapImageZoom img {
+	height: 100vh;
+	z-index: 9999;
+	transition: 0.1s ease-in-out;
+}
+
+.mapImageZoom div {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	/* transform: translateX(-50%); */
+	color: white;
+	padding-top: 10px;
+	font-size: 14pt;
+	z-index: 99999;
+	display: none; /* changed in next rule, when loading class added by component */
+}
+
+.mapImageZoom.loading div {
+	display: inline-block;
+}
+
+.mapImageZoom.loading img {
+	filter: brightness(80%);
+}
+
+.mapContainer {
+	display: inline-block;
+	height: 90vh;
+	width: 49vw;
+	vertical-align: top;
+}
+
+.mapThumbnails {
+	display: inline-block;
+	width: 50vw;
+	vertical-align: top;
+}
+
+.thumbnailsContainer {
+	height: 80vh;
+	overflow-y: scroll;
+}
+
+.thumbnailsContainer img {
+	box-sizing: border-box;
+	width: 16.2%;
+	margin-right: 2px;
+	transition: 0.3s ease-in-out;
+}
+
+.mapThumbnails img:hover {
+	/* border: 2px solid red; */
+	transform: scale(1.1);
+}
+
+.results img {
+	margin-right: 4px;
+}
+
+.imageDetails1 {
+	background-color: black;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.imageDetails p {
+	color: white; /* Loading message */
+}
+
+.imageDetails .infoPanel {
+	height: 10vh;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(100, 100, 100, 0.5);
+	color: white;
+	padding: 10px;
+}
+
+.imageDetails .infoPanel a {
+	text-decoration: none;
+	color: white;
+}
+
+.imageDetails img {
+	position: center;
+	height: 50vh;
+	top: 30%;
+	left: 50%;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.imageDetails .controls span {
+	z-index: 2000;
+	font-size: 18pt;
+	font-weight: bold;
+	top: 100px;
+	position: absolute;
+	cursor: pointer;
+	background-color: rgba(100, 100, 100, 0.5);
+	color: #eee;
+	width: 100px;
+	padding: 5px;
+}
+
+.imageDetails .controls .prev {
+	left: 10px;
+}
+
+.imageDetails .controls .next {
+	right: 10px;
+}
+
+.resultsList {
+	padding: 0;
+	margin: 0;
+}
+
+.resultsList li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 4px;
+	cursor: pointer;
+}
