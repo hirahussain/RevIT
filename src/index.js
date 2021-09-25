@@ -20,11 +20,11 @@ ReactDOM.render(
 	<div className="main">
 		<div className="navbar">
 			<a href="#home">Home</a>
-			<a href="#news">Products</a>
-			<a href="#news">Stores</a>
-			<a href="#news">Categories</a>
-			<a href="#news">Recommendations</a>
-			<a href="#contact">Contact Us</a>
+			<a href="#products">Products</a>
+			<a href="#stores">Stores</a>
+			<a href="#categories">Categories</a>
+			<a href="#recommendations">Recommendations</a>
+			<a href="#contactus">Contact Us</a>
 			<br /> <br />
 			<h1 className="RevIT-header">We keep only Genuine and Usefull Reviews from Real Users like U.</h1>
 			<React.StrictMode>
