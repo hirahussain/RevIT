@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 // import named exports from our BestBuy library file
-import { getProductDetailResults } from "../lib/bestbuy";
+import { getProductDetailResults } from "../../lib/bestbuy";
 
 function ProductDetail(props) {
 	const [info, setInfo] = useState({}); // for storing image info API response data
@@ -63,15 +63,6 @@ function ProductDetail(props) {
 		} // switch( ev.code )
 	} // handleKeypress()
 
-	// The keyboard handler is the more confusing example because the handler function
-	// attaches *once at mount*, so it will have a STALE value of the slideshowIndex prop
-	// from the time when it was attached at mount (its "closure" on that value) - i.e. the handler
-	// doesn't get updated slideshowIndex prop from parent *unless* we re-attach handler whenever prop changes!
-	// (actually props.slideshowIndex is not used directly in 'handleKeypress' but in the 'goPrev' and
-	// 'goNext' functions which it calls, but the principle is the same - 'handleKeypress' gets the
-	// versions of those functions (with their closures on props.slideshowIndex) that were defined when
-	// it was attached as a keypress handler when the component was mounted) :mind_blown:
-	// GOTHCHAAAAAAAAAAAAAAAA!
 	useEffect(() => {
 		window.addEventListener("keydown", handleKeypress);
 		return () => window.removeEventListener("keydown", handleKeypress);

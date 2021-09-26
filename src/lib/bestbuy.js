@@ -1,4 +1,6 @@
 import dotenv from "dotenv";
+import homeImage from "../assets/homeImage.gif";
+
 // dotenv package has been installed and .env.local file has been created to hide API Key
 dotenv.config();
 
@@ -32,9 +34,13 @@ function getProductReview(query) {
 	return "getReview";
 }
 
+function getHomeImage() {
+	return <img src={homeImage} alt="loading..." />;
+}
+
 // export object with all fns as default, just another way of accessing
 // NO - avoid default exports? Makes static analysis/tree-shaking harder??
 // export default {getSearchResults, getPhotoByID, getImageURL};
 
 // explicit named exports, isn't interesting ???
-export { getProductResults, getStoreResults, getProductReview, getProductDetailResults };
+export { getProductResults, getStoreResults, getProductReview, getProductDetailResults, getHomeImage };

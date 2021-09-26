@@ -1,45 +1,22 @@
 .RevIT {
 	text-align: center;
-}
-.navbar {
-	overflow: hidden;
-	background-color: rgb(244, 249, 250);
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-.navbar a {
-	float: left;
-	text-align: center;
-
-	color: #1b042e;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
-
-.navbar a:hover {
-	background: rgb(188, 199, 199);
-	color: rgb(38, 42, 42);
-}
-.main {
-	padding: 16px;
-	margin-top: 10px;
-}
-
-.RevIT-header {
-	background-color: #091835;
-	min-height: 20vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
+	background-color: #d9dae6;
 }
 
 .RevIT-link {
 	color: #09d3ac;
+}
+
+body {
+	font-family: verdana;
+	font-size: 13px;
+	margin: 0;
+}
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+	text-decoration: none;
+	color: #111;
 }

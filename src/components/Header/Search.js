@@ -15,14 +15,16 @@ const Search = (props) => {
 	return (
 		<div className="main">
 			<form onSubmit={handleSubmit} data-testid="searchForm">
-				<input
-					type="text"
-					onChange={(e) => setSearchText(e.target.value)}
-					defaultValue="All" // TODO: Remove this when deploy...
-					data-testid="searchField"
-					name="query"
-				/>
-				<button>Search</button>
+				<div>
+					<input
+						type="text"
+						onChange={(e) => setSearchText(e.target.value)}
+						defaultValue="All" // TODO: Remove this when deploy...
+						data-testid="searchField"
+						name="query"
+					/>
+					<button>Search</button>
+				</div>
 			</form>
 		</div>
 	);

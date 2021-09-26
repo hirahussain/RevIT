@@ -13,7 +13,7 @@ import { useDispatch } from "react-redux";
 // which is especially helpful for custom library files - it's not as
 // important for imported functions like 'useState()' because they are more
 // familiar core functions of the React framework.
-import * as bestbuy from "../lib/bestbuy";
+import * as bestbuy from "../../lib/bestbuy";
 
 // import Thumbnail from "./Thumbnail";
 
@@ -64,16 +64,32 @@ function SearchResults(props) {
 
 	return (
 		<div>
-			<h2>Results for "{query}"</h2>
-			<ul className="resultsList" data-testid="searchThumbnails">
+			<h2 style={{ justifyContent: "center" }}>Results for "{query}"</h2>
+			<div
+				className="resultsList"
+				style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+				data-testid="searchThumbnails">
 				{"products" in results ? (
 					results.products.map((prod, index) => (
-						<li key={index}>
-							<img src={prod.largeImage} alt={prod.name} onClick={(ev) => handleClick(ev, prod, index)} />
-							{prod.name} <br />
-							Review: {prod.customerReviewCount} || Average: {prod.customerReviewAverage} || Top Rated:{" "}
-							{prod.customerTopRated}
-						</li>
+						<div
+							style={{
+								backgroundColor: "white",
+								margin: 20,
+								width: 200,
+								justifyContent: "center",
+								border: "1px solid grey",
+							}}
+							key={index}>
+							<div>
+								<img src={prod.largeImage} alt={prod.name} onClick={(ev) => handleClick(ev, prod, index)} />
+							</div>
+							<div>{prod.name} </div>
+							<br />
+							<div>
+								Review: {prod.customerReviewCount} || Average: {prod.customerReviewAverage} || Top Rated:{" "}
+								{prod.customerTopRated}
+							</div>
+						</div> // TODO: move this to separate compnenet
 					))
 				) : (
 					<p>Loading results...</p>
@@ -89,7 +105,7 @@ function SearchResults(props) {
                 i.e. in Thumbnail.js:
                   <img onClick={props.onClick} src={...} />
             */}
-			</ul>
+			</div>
 		</div>
 	);
 } // SearchResults()

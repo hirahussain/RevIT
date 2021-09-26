@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
 
-import { getImageURL } from "../lib/bestbuy";
+import { getImageURL } from "../../lib/bestbuy";
 
 function FavouritesPanel(props) {
 	const history = useHistory();
