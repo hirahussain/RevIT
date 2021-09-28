@@ -8,7 +8,7 @@ dotenv.config();
 
 const API_KEY = "qhqws47nyvgze2mq3qx4jadt";
 const API_BASE_URL = "https://api.bestbuy.com/v1/";
-const URL_PARAMS = `format=json&apiKey=${API_KEY}`;
+const URL_PARAMS = `format=json&pageSize=50&apiKey=${API_KEY}`;
 
 // https://api.bestbuy.com/v1/products(search=oven&search=stainless&search=steel)?format=json&show=sku,name,salePrice&apiKey=qhqws47nyvgze2mq3qx4jadt
 

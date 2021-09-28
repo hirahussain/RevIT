@@ -76,7 +76,7 @@ function Product(props) {
 							style={{
 								backgroundColor: "white",
 								margin: 20,
-								width: 200,
+								width: 220,
 								justifyContent: "center",
 								border: "1px solid grey",
 								cursor: "pointer",
@@ -91,22 +91,11 @@ function Product(props) {
 								Review: {prod.customerReviewCount} || Average: {prod.customerReviewAverage} || Top Rated:{" "}
 								{prod.customerTopRated}
 							</div>
-						</div> // TODO: move this to separate compnenet
+						</div> // TODO: move this to separate component
 					))
 				) : (
 					<p>Loading results...</p>
 				)}
-				{/*
-              👆By setting up our click handler here in the map() instead of in
-               the child component, we save ourselves from having to pass down
-               the photo ID and index individually as props to the child.
-               But NOTE: even though it's called 'onClick', this is still just
-               a prop - because it's being used within a React component tag,
-               not a core HTML element tag. This means we still have to set it
-               up as a real click handler on the real HTML element in the child,
-                i.e. in Thumbnail.js:
-                  <img onClick={props.onClick} src={...} />
-            */}
 			</div>
 		</div>
 	);
