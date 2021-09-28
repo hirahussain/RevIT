@@ -1,14 +1,20 @@
 .footer {
 	position: bottom;
 	bottom: 0;
-	min-height: calc(100vh - 600px);
-	height: 30px;
+	min-height: calc(80vh - 600px);
+	height: 20px;
 	width: 100%;
-	background: #111;
+	background: #4c5d76;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 .footer p {
-	color: #777;
+	color: rgb(206, 202, 202);
+}
+
+.footer img {
+	border-radius: 10px;
+	padding: 15px;
+	width: 260px;
 }

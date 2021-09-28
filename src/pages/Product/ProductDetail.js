@@ -3,6 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 
 // import named exports from our BestBuy library file
 import { getProductDetailResults } from "../../lib/bestbuy";
+import "./Product.css";
 
 function ProductDetail(props) {
 	const [info, setInfo] = useState({}); // for storing image info API response data

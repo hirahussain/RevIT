@@ -14,7 +14,7 @@ import "./RevIT.css";
 
 // Pages
 const Home = React.lazy(() => import("../pages/Home/Home"));
-const ProductHome = React.lazy(() => import("../pages/Product/ProductHome"));
+const Product = React.lazy(() => import("../pages/Product/Product"));
 const ProductDetail = React.lazy(() => import("../pages/Product/ProductDetail"));
 const Stores = React.lazy(() => import("../pages/Home/Home"));
 const Categories = React.lazy(() => import("../pages/Home/Home"));
@@ -36,7 +36,7 @@ function RevIT() {
 					<Switch>
 						<Route path="/home" component={Home} />
 						<Route exact path="/product/:query">
-							<ProductHome
+							<Product
 								setCache={setResultsCache}
 								cache={resultsCache}
 								setLastSearchText={setLastSearchText}

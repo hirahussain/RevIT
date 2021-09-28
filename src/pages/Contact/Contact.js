@@ -1,13 +1,13 @@
 import React from "react";
 import "./Contact.css";
+import ContactImage from "./ContactImage";
 
 export default function Contact() {
 	return (
 		<div className="contact">
-			<p>
-				Suspendisse in magna a nisi volutpat sagittis. Nullam aliquet pharetra mi, nec tincidunt erat tincidunt
-				dignissim.
-			</p>
+			<p>Contact us.</p>
+			<p>Page Under Construction.</p>
+			{<ContactImage />}
 		</div>
 	);
 }

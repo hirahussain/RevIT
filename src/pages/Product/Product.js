@@ -14,10 +14,11 @@ import { useDispatch } from "react-redux";
 // important for imported functions like 'useState()' because they are more
 // familiar core functions of the React framework.
 import * as bestbuy from "../../lib/bestbuy";
+import "./Product.css";
 
 // import Thumbnail from "./Thumbnail";
 
-function SearchResults(props) {
+function Product(props) {
 	const [results, setResults] = useState(props.cache); // for storing API response data - defaults to cache data
 
 	const { push } = useHistory();
@@ -78,6 +79,7 @@ function SearchResults(props) {
 								width: 200,
 								justifyContent: "center",
 								border: "1px solid grey",
+								cursor: "pointer",
 							}}
 							key={index}>
 							<div>
@@ -108,6 +110,6 @@ function SearchResults(props) {
 			</div>
 		</div>
 	);
-} // SearchResults()
+} // Product()
 
-export default SearchResults;
+export default Product;
