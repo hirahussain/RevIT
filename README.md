@@ -24,9 +24,4 @@
    d. react-redux 7.2.5
    e. react-route-dom 5.3.0
 
-Deployment:
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![alt text](https://github.com/hirahussain/RevIT/blob/main/src/assets/homeImage.gif)
