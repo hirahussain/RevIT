@@ -19,14 +19,6 @@
 	color: white; /* Loading message */
 }
 
-.imageDetails .infoPanel {
-	height: 10vh;
-	width: auto;
-	background-color: rgba(100, 100, 100, 0.5);
-	color: white;
-	padding: 10px;
-}
-
 .imageDetails .infoPanel a {
 	text-decoration: none;
 	color: white;
@@ -88,35 +80,14 @@
 	cursor: pointer;
 }
 
-thead {
-	background-color: #003b64;
-	color: #fff;
-}
-table {
-	margin-top: 10px;
-}
-tr:nth-child(even) {
-	background-color: #f8fafd;
-}
-a {
-	cursor: pointer;
+.left-col {
+	display: inline-block;
+	width: 50%;
 }
 
-.container {
-	height: 100vh;
-	background-color: #fff;
-	padding-top: 50px;
-}
-.headline {
-	font-weight: 100;
-	font-size: 50px;
-}
-.subhead {
-	font-size: 20px;
-	font-weight: 200;
-	margin: 0 0 50px 0;
-}
-.drop {
-	margin-top: 10px;
-	width: 15%;
+.right-col {
+	display: inline-block;
+
+	background-color: rgba(31, 30, 30, 0.5);
+	color: rgb(248, 244, 244);
 }

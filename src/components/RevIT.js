@@ -36,7 +36,7 @@ function RevIT() {
 				<React.Suspense fallback={<Loader />}>
 					<Switch>
 						<Route path="/home" component={Home} />
-						<Route exact path="/product/:query">
+						<Route exact path="/Product/:query">
 							<Product
 								setCache={setResultsCache}
 								cache={resultsCache}
@@ -44,7 +44,7 @@ function RevIT() {
 								setSlideshowIndex={setSlideshowIndex}
 							/>
 						</Route>
-						<Route exact path="/productDetail/:sku">
+						<Route exact path="/ProductDetail/:sku">
 							<ProductDetail
 								slideshowIndex={slideshowIndex}
 								setSlideshowIndex={setSlideshowIndex}

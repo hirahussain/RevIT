@@ -94,31 +94,12 @@ function ProductDetail(props) {
 						<div>
 							<h1>{info.products[0].name}</h1>
 							<br /> <br /> <br /> <br />
-							<div>
+							<div className="left-col">
 								<img src={info.products[0].image} onClick={goSearchResults} alt={info.products[0].name} />
 							</div>
-							<div>
-								<table className="table-bordered table">
-									<thead className="table-head">
-										<tr>
-											<td className="col-md-8">
-												<strong>Name</strong>
-											</td>
-											<td className="col-md-2">
-												<strong>SKU</strong>
-											</td>
-											<td className="col-md-2">
-												<strong>Sale Price</strong>
-											</td>
-										</tr>
-									</thead>
-									<tbody>
-										{info.products[0].name} ==== {info.products[0].sku} ====
-										{info.products[0].regularPrice}
-									</tbody>
-								</table>
-							</div>
-							<div className="infoPanel">
+							<div className="right-col">
+								{info.products[0].name} ===={info.products[0].sku}
+								{info.products[0].regularPrice}
 								<a href={info.products[0].url}></a>
 								{info.products[0].name}
 								<p>{info.products[0].plot}</p>

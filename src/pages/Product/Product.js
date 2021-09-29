@@ -72,10 +72,9 @@ function Product(props) {
 						<div
 							style={{
 								backgroundColor: "white",
-								margin: 20,
-								width: 220,
+								margin: 40,
+								width: 380,
 								justifyContent: "center",
-								border: "1px solid grey",
 								cursor: "pointer",
 							}}
 							key={index}>
