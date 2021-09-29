@@ -24,4 +24,4 @@
    d. react-redux 7.2.5
    e. react-route-dom 5.3.0
 
-![alt text](https://github.com/hirahussain/RevIT/blob/main/src/assets/features.gif)
+![alt text](https://github.com/hirahussain/RevIT/blob/main/src/assets/features.png)
