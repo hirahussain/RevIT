@@ -6,6 +6,7 @@ export default function Home() {
 	return (
 		<div className="home">
 			<p>
+				<br />
 				<HomeImage />
 			</p>
 		</div>

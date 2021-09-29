@@ -1,19 +1,19 @@
 import dotenv from "dotenv";
-import contactImage from "../assets/homeImage.gif";
+import aboutImage from "../assets/homeImage.gif";
 import footerImage from "../assets/footerImage.png";
 import homeImage from "../assets/features.png";
 
 // dotenv package has been installed and .env.local file has been created to hide API Key
 dotenv.config();
 
+// const API_KEY = process.env.REACT_APP_BESTBUY_API_KEY; -- TODO: Check why it is not working
+
 const API_KEY = "qhqws47nyvgze2mq3qx4jadt";
 const API_BASE_URL = "https://api.bestbuy.com/v1/";
 const URL_PARAMS = `format=json&pageSize=50&apiKey=${API_KEY}`;
 
-// https://api.bestbuy.com/v1/products(search=oven&search=stainless&search=steel)?format=json&show=sku,name,salePrice&apiKey=qhqws47nyvgze2mq3qx4jadt
-
 const PRODUCT_URL = `${API_BASE_URL}products?&${URL_PARAMS}`;
-const SEARCH_STORE_URL = `${API_BASE_URL}store?&${URL_PARAMS}`;
+const SEARCH_STORE_URL = `${API_BASE_URL}stores?&${URL_PARAMS}`;
 
 function getProductResults(query) {
 	// console.log("SEARCH_PRODUCT_URL: ", SEARCH_PRODUCT_URL);
@@ -44,8 +44,8 @@ function getFooterImage() {
 	return <img src={footerImage} alt="loading..." />;
 }
 
-function getContactImage() {
-	return <img src={contactImage} alt="loading..." />;
+function getAbouttImage() {
+	return <img src={aboutImage} alt="loading..." />;
 }
 // export object with all fns as default, just another way of accessing
 // NO - avoid default exports? Makes static analysis/tree-shaking harder??
@@ -59,5 +59,5 @@ export {
 	getProductDetailResults,
 	getHomeImage,
 	getFooterImage,
-	getContactImage,
+	getAbouttImage,
 };

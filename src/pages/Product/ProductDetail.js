@@ -70,40 +70,65 @@ function ProductDetail(props) {
 	}, [props.slideshowIndex]); // this dependency is necessary to avoid stale values of slideshowIndex in the handler
 
 	return (
-		<div className="imageDetails">
-			{
-				// only show nav controls if the cache exists, i.e we're here via search results,
-				// not via a direct link to a details page
-				props.cache && (
-					<div className="controls">
-						<span className="prev" onClick={goPrev}>
-							&lt; prev
-						</span>
-						<span className="next" onClick={goNext}>
-							next &gt;
-						</span>
-					</div>
-				)
-			}
-			{
-				// check if the 'product' key is set (truthy), i.e. we have the query response;
-				// a safer version might be " 'product' in info  "   - "in" is the JS operator for
-				// checking whether a key is defined in an object
-				info.products ? (
-					<>
-						<img src={info.products[0].image} onClick={goSearchResults} alt={info.products[0].name} />
-						<div className="infoPanel">
-							{/* {console.log("info products", info.products[0])} */}
-							<strong>
-								<a href={info.products[0].url}>{info.products[0].name}</a>
-							</strong>
-							<p>{info.products[0].plot}</p>
+		<div className="home">
+			<div className="imageDetails">
+				{
+					// only show nav controls if the cache exists, i.e we're here via search results,
+					// not via a direct link to a details page
+					props.cache && (
+						<div className="controls">
+							<span className="prev" onClick={goPrev}>
+								&lt; prev
+							</span>
+							<span className="next" onClick={goNext}>
+								next &gt;
+							</span>
 						</div>
-					</>
-				) : (
-					<p>Loading...</p>
-				)
-			}
+					)
+				}
+				{
+					// check if the 'product' key is set (truthy), i.e. we have the query response;
+					// a safer version might be " 'product' in info  "   - "in" is the JS operator for
+					// checking whether a key is defined in an object
+					info.products ? (
+						<div>
+							<h1>{info.products[0].name}</h1>
+							<br /> <br /> <br /> <br />
+							<div>
+								<img src={info.products[0].image} onClick={goSearchResults} alt={info.products[0].name} />
+							</div>
+							<div>
+								<table className="table-bordered table">
+									<thead className="table-head">
+										<tr>
+											<td className="col-md-8">
+												<strong>Name</strong>
+											</td>
+											<td className="col-md-2">
+												<strong>SKU</strong>
+											</td>
+											<td className="col-md-2">
+												<strong>Sale Price</strong>
+											</td>
+										</tr>
+									</thead>
+									<tbody>
+										{info.products[0].name} ==== {info.products[0].sku} ====
+										{info.products[0].regularPrice}
+									</tbody>
+								</table>
+							</div>
+							<div className="infoPanel">
+								<a href={info.products[0].url}></a>
+								{info.products[0].name}
+								<p>{info.products[0].plot}</p>
+							</div>
+						</div>
+					) : (
+						<p>Loading...</p>
+					)
+				}
+			</div>
 		</div>
 	);
 } // ProductDetail()

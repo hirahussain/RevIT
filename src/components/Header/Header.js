@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import "./Header.css";
 
@@ -6,7 +6,7 @@ import Navigation from "../Navigation/Navigation";
 import Search from "./Search";
 
 export default function Header(props) {
-	const [formData, setFormData] = useState("");
+	// const [formData, setFormData] = useState("");
 	const path = useLocation().pathname;
 	const location = path.split("/")[1];
 
@@ -21,7 +21,10 @@ export default function Header(props) {
 						<Search setCache={props.setCache} />
 					</>
 				) : (
-					<h4>{location}</h4>
+					<h4>
+						{location !== "productDetail" ? location : ""}
+						{console.log("location", location)}
+					</h4>
 				)}
 			</div>
 		</div>

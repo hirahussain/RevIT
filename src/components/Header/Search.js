@@ -13,7 +13,7 @@ const Search = (props) => {
 	};
 
 	return (
-		<div className="main">
+		<div>
 			<form onSubmit={handleSubmit} data-testid="searchForm">
 				<div>
 					<input

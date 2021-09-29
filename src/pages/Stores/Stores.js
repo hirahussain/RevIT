@@ -2,23 +2,12 @@ import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-// Another way to import - this means "take all the named exports from this
-// file and make them into properties of a single object, which will live in
-// the variable called "bestbuy" (could be named anything)
-// Then to use them, you would write:
-//
-//    bestbuy.getImageURL( aPhotoObject );
-//
-// This makes it a bit clearer in your code where 'getImageURL' comes from,
-// which is especially helpful for custom library files - it's not as
-// important for imported functions like 'useState()' because they are more
-// familiar core functions of the React framework.
 import * as bestbuy from "../../lib/bestbuy";
-import "./Product.css";
+import "./Stores.css";
 
 // import Thumbnail from "./Thumbnail";
 
-function Product(props) {
+function Stores(props) {
 	const [results, setResults] = useState(props.cache); // for storing API response data - defaults to cache data
 
 	const { push } = useHistory();
@@ -26,32 +15,25 @@ function Product(props) {
 
 	const dispatch = useDispatch();
 
-	function handleClick(ev, products, index) {
-		console.log("ev", ev, products, index);
+	function handleClick(ev, stores, index) {
+		console.log("ev", ev, stores, index);
 		if (ev.shiftKey) {
-			dispatch({ type: "favourites/add", payload: products });
+			dispatch({ type: "favourites/add", payload: stores });
 			// ev.stopPropagation();
 			return;
 		}
 		props.setSlideshowIndex(index); // for slideshow navigation, so we know relative position of this image in  results
-		push(`/productDetail/${products.sku}`);
+		push(`/storeDetail/${stores.storeId}`);
 	}
 
 	useEffect(() => {
-		if (props.cache.products) {
-			// Early return if cache is available, i.e. prevent the
-			// fetching of new results; the cache will be used by default
-			// unless we run the fetch(), because we have given props.cache
-			// to useState() above to use as the default value for 'results'
+		if (props.cache.stores) {
 			return;
 		}
 
 		setResults({}); // clear the results so we don't see old results while new ones are loading (we'll see loading message)
 
-		// fetch( SEARCH_URL + query )
-		//   .then( response => response.json() )
-		// 👆The .json() call now happens internally in our library, which returns the next promise to us
-		// (i.e. the promise with the results of the .json(), i.e. the actual data)
+		// Resume from here
 		bestbuy
 			.getProductResults(query)
 			.then((data) => {
@@ -64,7 +46,7 @@ function Product(props) {
 	}, [query]); // "Listen for changes to this prop and run the useEffect callback function if it changes"
 
 	return (
-		<div className="home">
+		<div className="product">
 			<h2>Results for "{query}"</h2>
 			<div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }} data-testid="searchThumbnails">
 				{"products" in results ? (
