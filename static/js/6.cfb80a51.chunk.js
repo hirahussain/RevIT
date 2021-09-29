@@ -1,2 +1,0 @@
-(this["webpackJsonprev-it"]=this["webpackJsonprev-it"]||[]).push([[6],{51:function(n,t,e){},55:function(n,t,e){"use strict";e.r(t),e.d(t,"default",(function(){return i}));e(0),e(51);var c=e(1);function i(){return Object(c.jsx)("div",{className:"not-found",children:Object(c.jsx)("h3",{children:"Page not found!"})})}}}]);
-//# sourceMappingURL=6.cfb80a51.chunk.js.map

@@ -1,0 +1,2 @@
+(this["webpackJsonprev-it"]=this["webpackJsonprev-it"]||[]).push([[4],{49:function(t,e,c){},54:function(t,e,c){"use strict";c.r(e),c.d(e,"default",(function(){return s}));c(0);var n=c(26),r=(c(49),c(1));function s(){return Object(r.jsxs)("div",{className:"about",children:[Object(r.jsx)("p",{children:"Page Under Construction."}),Object(r.jsx)("br",{}),Object(r.jsx)("br",{}),Object(r.jsx)("br",{}),Object(n.a)()]})}}}]);
+//# sourceMappingURL=4.cbee50ef.chunk.js.map

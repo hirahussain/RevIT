@@ -1,0 +1,2 @@
+(this["webpackJsonprev-it"]=this["webpackJsonprev-it"]||[]).push([[0],{48:function(t,e,n){},58:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return i}));n(0);var c=n(26);var r=function(){return Object(c.b)()},s=(n(48),n(1));function i(){return Object(s.jsx)("div",{className:"home",children:Object(s.jsxs)("p",{children:[Object(s.jsx)("br",{}),Object(s.jsx)(r,{})]})})}}}]);
+//# sourceMappingURL=0.12adfc28.chunk.js.map

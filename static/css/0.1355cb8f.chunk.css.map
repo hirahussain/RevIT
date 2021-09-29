@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/pages/Home/Home.css"],"names":[],"mappings":"AAAA,MACC,YACD,CAEA,KACC,WACD","file":"0.1355cb8f.chunk.css","sourcesContent":[".home {\r\n\tpadding: 20px;\r\n}\r\n\r\n.img {\r\n\twidth: 160px;\r\n}\r\n"]}
